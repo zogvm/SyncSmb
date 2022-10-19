@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">Sync SMB</string>
+
+    <string name="last_upload_time_text">last_upload_time</string>
+    <string name="progress_text">progress</string>
+    <string name="upload_button">upload</string>
+    <string name="stop_server_button">stop Server</string>
+    
+
+    <string name="agreement">I agree with the terms and conditions.</string>
+ 
+    <string name="settings_menu_label">Settings</string>
+
+    <string name="tab_config_text_1">Server</string>
+    <string name="tab_config_text_2">Local</string>
+
+    <string name="config_server_text_server">Server</string>
+    <string name="config_server_text_username">Username</string>
+    <string name="config_server_text_password">Password</string>
+    <string name="config_server_text_domain">Domain</string>
+    <string name="config_server_text_share">Share</string>
+    <string name="config_server_button_save">Save</string>
+
+    <string name="config_local_text_phonename">phone name</string>
+    <string name="config_local_text_timehour">time(hour)</string>
+    <string name="config_local_text_pathone">DCIM/</string>
+    <string name="config_local_text_pathtwo">tencent/MicroMsg/WeiXin/</string>
+    <string name="config_local_text_paththree">Picture/WeiXin/</string>
+    <string name="config_local_button_save">Save</string>
+
+    <string name="error_title">Error</string>
+    <string name="error_not_found">Not found</string>
+
+
+</resources>
