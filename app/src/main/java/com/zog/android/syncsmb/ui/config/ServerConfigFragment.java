@@ -57,7 +57,7 @@ public class ServerConfigFragment extends Fragment {
         final EditText textDomain = root.findViewById(R.id.editDomain);
         final EditText textShare = root.findViewById(R.id.editShare);
 
-        textServer.setText(config.getString("server", "192.168.1.5"));
+        textServer.setText(config.getString("server", "192.168.1.10"));
         textUsername.setText(config.getString("username", "Administrator"));
         textPassword.setText(config.getString("password", ""));
         textDomain.setText(config.getString("domain", "pc-name"));

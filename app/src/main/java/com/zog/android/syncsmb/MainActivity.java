@@ -435,55 +435,55 @@ public class MainActivity extends AppCompatActivity {
 
         return temp;
     }
-
-    // 获取本地文件
-    List<java.io.File> GetAllLocalFiles() {
-        List<File> localFileList = GetLocalFiles("DCIM/");
-        List<java.io.File> temp;
-        temp = GetLocalFiles("tencent/MicroMsg/WeiXin/");
-        if (temp != null) {
-            localFileList.addAll(temp);
-        }
-        temp = GetLocalFiles("Picture/WeiXin/");
-        if (temp != null) {
-            localFileList.addAll(temp);
-        }
-        temp = GetLocalFiles(config.getString("PathOne", null));
-        if (temp != null) {
-            localFileList.addAll(temp);
-        }
-        temp = GetLocalFiles(config.getString("PathTwo", null));
-        if (temp != null) {
-            localFileList.addAll(temp);
-        }
-        temp = GetLocalFiles(config.getString("PathThree", null));
-        if (temp != null) {
-            localFileList.addAll(temp);
-        }
-
-//        for ( java.io.File file : localFileList )
-//        {
-//            Log.d("mainactivity",file.getAbsolutePath());
+//
+//    // 获取本地文件
+//    List<java.io.File> GetAllLocalFiles() {
+//        List<File> localFileList = GetLocalFiles("DCIM/");
+//        List<java.io.File> temp;
+//        temp = GetLocalFiles("tencent/MicroMsg/WeiXin/");
+//        if (temp != null) {
+//            localFileList.addAll(temp);
 //        }
-        return localFileList;
-    }
-
-    List<java.io.File> GetLocalFiles(String strPath) {
-        if (strPath == null)
-            return null;
-        if (strPath.isEmpty())
-            return null;
-        String dir = GetLocalDir(strPath);
-        if (dir.isEmpty())
-            return null;
-        File localDir = new File(dir);
-        //List<java.io.File> localFileList;
-        return (List<java.io.File>) FileUtils.listFiles(localDir, null, true);
-//        for ( java.io.File file : localFileList )
-//        {
-//            Log.d("mainactivity",file.getAbsolutePath());
+//        temp = GetLocalFiles("Picture/WeiXin/");
+//        if (temp != null) {
+//            localFileList.addAll(temp);
 //        }
-    }
+//        temp = GetLocalFiles(config.getString("PathOne", null));
+//        if (temp != null) {
+//            localFileList.addAll(temp);
+//        }
+//        temp = GetLocalFiles(config.getString("PathTwo", null));
+//        if (temp != null) {
+//            localFileList.addAll(temp);
+//        }
+//        temp = GetLocalFiles(config.getString("PathThree", null));
+//        if (temp != null) {
+//            localFileList.addAll(temp);
+//        }
+//
+////        for ( java.io.File file : localFileList )
+////        {
+////            Log.d("mainactivity",file.getAbsolutePath());
+////        }
+//        return localFileList;
+//    }
+//
+//    List<java.io.File> GetLocalFiles(String strPath) {
+//        if (strPath == null)
+//            return null;
+//        if (strPath.isEmpty())
+//            return null;
+//        String dir = GetLocalDir(strPath);
+//        if (dir.isEmpty())
+//            return null;
+//        File localDir = new File(dir);
+//        //List<java.io.File> localFileList;
+//        return (List<java.io.File>) FileUtils.listFiles(localDir, null, true);
+////        for ( java.io.File file : localFileList )
+////        {
+////            Log.d("mainactivity",file.getAbsolutePath());
+////        }
+//    }
 
     static String getSDCardDir() {
         return Environment.getExternalStorageDirectory().toString();
