@@ -75,3 +75,17 @@ APK下载：
 
 https://github.com/zogvm/SyncSmb/releases/download/1.0/syncSmb1.0.apk
 
+
+
+
+未来修复，存在的BUG：
+
+无法上传超过2G的文件
+
+build.gradle 需要更新下面的库到0.12.0和以上
+
+implementation 'com.hierynomus:smbj:0.11.5'
+
+见 https://github.com/hierynomus/smbj/issues/740
+
+https://github.com/hierynomus/smbj
