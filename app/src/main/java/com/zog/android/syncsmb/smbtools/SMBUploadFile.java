@@ -83,9 +83,10 @@ public class SMBUploadFile extends AsyncTask<String, String, Boolean> {
                         || tempLocalpath.contains("DCIM/.globalTrash")
                         || tempLocalpath.contains("DCIM/.")
                         || tempLocalpath.contains("DCIM/Creative/temp")
+                        || tempLocalpath.contains("caches")
                         || tempLocalpath.contains("DCIM/Camera/cache/")) {
                     i++;
-                    publishProgress(i + "/" + total + ":" + tempRemotePath);
+                    publishProgress(i + "/" + total + ":jump:" + tempRemotePath);
                     continue;
                 }
 
@@ -100,12 +101,13 @@ public class SMBUploadFile extends AsyncTask<String, String, Boolean> {
 
                 //上传到远端
                 if (needCopy) {
+                    publishProgress(i + "/" + total + ":upload:" + tempRemotePath);
                     smb.createAllDir(tempRemoteParent);
                     smb.copyToRemote(file, tempRemotePath);
                 }
 
                 i++;
-                publishProgress(i + "/" + total + ":" + tempRemotePath);
+                publishProgress(i + "/" + total + ":finish:" + tempRemotePath);
             }
         } catch (IOException ex) {
             error = ex.toString();
